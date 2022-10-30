@@ -39,7 +39,7 @@ public class GUIgroup extends GUIelement {
         boolean result = false;
 
         for (int i = 0; i < guiElementList.size(); i++) {
-            resule = guiElementList.get(i).handleClick(x, y);
+            result = guiElementList.get(i).handleClick(x, y);
 
             if (result) {
                 break;
