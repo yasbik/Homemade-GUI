@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class GUIgroup extends GUIelement {
     
-    ArrayList<GUIelement> guiElementList;
+    private ArrayList<GUIelement> guiElementList;
 
     public GUIgroup() {
         guiElementList = new ArrayList<GUIelement>();
@@ -18,11 +18,44 @@ public class GUIgroup extends GUIelement {
     public void draw() {
         
         for (int i = 0; i < guiElementList.size(); i++) {
-            super.draw();
-
+            guiElementList.get(i).draw();
         }
     }
 
+    public boolean handleClick(double x, double y) {
+        boolean result = false;
+
+        for (int i = 0; i < guiElementList.size(); i++) {
+            result = guiElementList.get(i).handleClick(x, y);
+
+            if (result) {
+                break;
+            }
+        }
+        return result;
+    }
+
+    public boolean handleCharTyped(char c) {
+        boolean result = false;
+
+        for (int i = 0; i < guiElementList.size(); i++) {
+            resule = guiElementList.get(i).handleClick(x, y);
+
+            if (result) {
+                break;
+            }
+        }
+        return result;
+    }
+
+    public void resetRadioButtons() {
+
+        for (int i = 0; i < guiElementList.size(); i++) {
+            if (guiElementList.get(i) instanceof RadioButton) {
+                guiElementList.get(i).reset();
+            }
+        }
+    }
 
 }
 
