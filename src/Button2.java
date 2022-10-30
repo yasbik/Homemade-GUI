@@ -1,12 +1,16 @@
-public class Button extends GUIelement {
+public class Button2 extends GUIelement {
 
     private static final double BORDER_WIDTH = 0.006;
 
+    private Handler handle;
+
     
-    public Button ( double xCenterIn, double yCenterIn,
-                    double halfWidthIn, double halfHeightIn, String title) {
+    public Button2 ( double xCenterIn, double yCenterIn,
+                    double halfWidthIn, double halfHeightIn, String title, Handler h) {
 
         super(xCenterIn, yCenterIn, halfWidthIn, halfHeightIn, title, false);
+
+        handle = h;
     }
     
     public void draw() {
@@ -40,6 +44,10 @@ public class Button extends GUIelement {
             Utilities.waitMouseUp();
             highlighted = false;
             draw();
+
+            if (handle != null) {
+                handle.doIt();
+            }
             return true;
         }
     }
