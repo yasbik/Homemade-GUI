@@ -11,4 +11,4 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 # About the Project
 
-This is a simple GUI with event handling to dempnstrate how real-life GUI's work and how objects and OOP is used to create them.
+This is a simple GUI with event handling created with Java graphics library. The project dempnstrates how real-life GUIs work and how objects and OOP is used to create them.
