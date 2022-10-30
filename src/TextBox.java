@@ -1,5 +1,3 @@
-import javax.sound.midi.VoiceStatus;
-
 public class TextBox extends GUIelement {
 
     private static final double MARGIN = 0.005;
@@ -17,9 +15,11 @@ public class TextBox extends GUIelement {
 
     public void draw() {
         // draw outline
-        StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.setPenRadius();
-        StdDraw.rectangle(xCentre, yCentre, halfWidth, halfHeight);
+        // StdDraw.setPenColor(StdDraw.BLACK);
+        // StdDraw.setPenRadius();
+        // StdDraw.rectangle(xCentre, yCentre, halfWidth, halfHeight);
+
+        super.draw();
 
         StdDraw.textLeft((xCentre - halfWidth + MARGIN), yCentre, text);
     }
