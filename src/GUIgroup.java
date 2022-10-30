@@ -39,7 +39,7 @@ public class GUIgroup extends GUIelement {
         boolean result = false;
 
         for (int i = 0; i < guiElementList.size(); i++) {
-            result = guiElementList.get(i).handleClick(x, y);
+            result = guiElementList.get(i).handleCharTyped(c);
 
             if (result) {
                 break;
@@ -52,7 +52,7 @@ public class GUIgroup extends GUIelement {
 
         for (int i = 0; i < guiElementList.size(); i++) {
             if (guiElementList.get(i) instanceof RadioButton) {
-                guiElementList.get(i).reset();
+                ((RadioButton)guiElementList.get(i)).reset();
             }
         }
     }
