@@ -32,6 +32,8 @@ public class Button extends GUIelement {
         else {
             // change highlight to true and reset the buttons
             highlighted = true;
+            draw();
+            highlighted = false;
             Utilities.waitMouseUp();
             draw();
             return true;
