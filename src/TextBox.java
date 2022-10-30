@@ -10,7 +10,7 @@ public class TextBox extends GUIelement {
                     double halfWidthIn, double halfHeightIn,
                     String newText, boolean isInput) {
 
-        super(xCentreIn, xCentreIn, halfWidthIn, halfHeightIn, newText, isInput);
+        super(xCentreIn, yCenterIn, halfWidthIn, halfHeightIn, newText, isInput);
 
         this.isInput = isInput;
     }
@@ -34,6 +34,7 @@ public class TextBox extends GUIelement {
         else {
             if (isInput) {
                 text = "";
+                draw();
             }
             return true;
         }

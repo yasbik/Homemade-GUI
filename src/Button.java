@@ -22,6 +22,7 @@ public class Button extends GUIelement {
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.setPenRadius();
         StdDraw.rectangle(xCentre, yCentre, halfWidth, halfHeight);
+        StdDraw.text(xCentre, yCentre, text);
     }
 
     public boolean handleClick(double x, double y) {
